@@ -43,7 +43,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rspec-rails', '~> 3.6'
-  gem 'factory_girl_rails', '~> 4.8'
+  gem 'factory_bot_rails'
   gem 'cucumber-rails', '~> 1.5', :require => false
   gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
 end
