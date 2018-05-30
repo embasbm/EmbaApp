@@ -2,7 +2,9 @@
 
 <h1>Users</h1>
 
-<table class="sortable">
+<%= link_to 'New User', new_user_path %>
+
+<table id="userstable" class="sortable" data-current-page="<%= @users.current_page %>" data-total-pages="<%= @users.total_pages %>" >
   <thead>
     <tr>
       <th>First name</th>
@@ -27,5 +29,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path %>
