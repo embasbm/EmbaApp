@@ -2,7 +2,9 @@
 
 <h1>Users</h1>
 
-<table class="sortable">
+<%= link_to 'New User', new_user_path %>
+
+<table class="sortable" data-current-page="">
   <thead>
     <tr>
       <th>First name</th>
@@ -28,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= will_paginate @users %>

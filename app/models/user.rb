@@ -4,5 +4,5 @@ class User
   field :last_name, type: String
   field :email, type: String
 
-  paginates_per 20
+  # paginates_per 20
 end
