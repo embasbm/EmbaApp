@@ -10,6 +10,11 @@ window.addEventListener("scroll", function(e) {
   e.preventDefault()
 
   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-    Turbolinks.visit('/users?page=2');
+    users = document.getElementById('userstable')
+    currentPage = Number(users.dataset.currentPage)
+    totalPages = Number(users.dataset.totalPages)
+    if ( currentPage < totalPages) {
+      Turbolinks.visit('/users?page=' + (currentPage + 1))
+    }
   }
 });
