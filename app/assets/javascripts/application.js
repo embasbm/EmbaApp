@@ -14,7 +14,7 @@ window.addEventListener("scroll", function(e) {
     currentPage = Number(users.dataset.currentPage)
     totalPages = Number(users.dataset.totalPages)
     if ( currentPage < totalPages) {
-      Turbolinks.visit('/users?page=' + (currentPage + 1))
+      Turbolinks.visit('/users?page=' + (currentPage + 1), { action: "replace" })
     }
   }
 });
