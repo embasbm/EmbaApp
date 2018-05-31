@@ -51,12 +51,15 @@ group :development, :test do
   gem 'cucumber-rails', '~> 1.5', :require => false
   gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
   gem 'faker'
+  gem 'action-cable-testing'
 end
 
 group :test do
-  gem 'capybara', '~> 2.14'
   gem 'mongoid-rspec', git: 'https://github.com/mongoid-rspec/mongoid-rspec.git'
   gem 'email_spec', '~> 2.1'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
