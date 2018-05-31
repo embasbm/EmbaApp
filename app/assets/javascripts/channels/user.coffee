@@ -7,6 +7,7 @@ App.user = App.cable.subscriptions.create "UserChannel",
 
   received: (data) ->
     tr = document.getElementById(data.user._id.$oid)
-    tr.getElementsByClassName('first_name')[0].innerHTML = data.user.first_name
-    tr.getElementsByClassName('last_name')[0].innerHTML = data.user.last_name
-    tr.getElementsByClassName('email')[0].innerHTML = data.user.email
+    if tr != null
+      tr.getElementsByClassName('first_name')[0].innerHTML = data.user.first_name
+      tr.getElementsByClassName('last_name')[0].innerHTML = data.user.last_name
+      tr.getElementsByClassName('email')[0].innerHTML = data.user.email
